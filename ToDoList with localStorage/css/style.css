@@ -1,0 +1,100 @@
+﻿html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 解法一: 背景固定 */
+html{
+  font-family: 微軟正黑體;
+  background: linear-gradient(#E4D18F, #D85A66) fixed;
+}
+/* 解法二: body設定最小高度為瀏覽器高度 */
+/*body{
+  font-family: 微軟正黑體;
+  background: linear-gradient(#E4D18F, #D85A66);
+  min-height: 100vh;
+}
+*/
+.wrap{
+  width: 700px;
+  margin: 40px auto;
+  border: 1px solid black;
+  padding: 20px 20px 80px 20px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+.inputBar{
+  width: 400px;
+}
+#myInput, #myBtn{
+  font-size: 18px;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+#myInput{
+  width: 310px;
+  border: 2px solid black;
+  margin-right: 10px;
+}
+#myBtn{
+  background-color: #5CB85C;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+#myList li{
+  border-bottom: 1.5px solid silver;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.5em;
+}
+#myList a{
+  text-decoration: none;
+  color: white;
+  background-color: #BE405B;
+  border-radius: 5px;
+  user-select: none;
+  margin-right: 5px;
+}

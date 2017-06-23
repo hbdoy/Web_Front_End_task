@@ -1,0 +1,189 @@
+body{
+    font-family: "微軟正黑體";
+    margin: 0;
+    padding: 0;
+    border: 0;
+    user-select: none;
+    background-image: url(../img/bg.jpg);
+    background-attachment: fixed;
+}
+.header{
+    padding: 8px;
+    /*background-color: orangered;*/
+    margin-bottom: 10px;
+}
+.header h1{
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.container{
+    width: 800px;
+    box-sizing: border-box;
+    min-height: 500px;
+    margin: 0 auto;
+    padding: 30px 30px 100px 30px;
+    position: relative;
+    background-color: #F5F5F5;
+}
+.footer{
+    width: 800px;
+    box-sizing: border-box;
+    color: #666666;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    border-top: 1px solid #E2E2E2;
+    background-color: #F5F5F5;
+    line-height: 1.5;
+    position: absolute;
+    left: 0;
+    bottom: -62.33px;
+}
+.landingPage{
+    display: flex;
+    justify-content: space-around;
+}
+.landingPage button{
+    background-color: #4BA1DE;
+    color: white;
+    width: 150px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-family: "微軟正黑體";
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid white;
+}
+.landingPage button:hover{
+    opacity: 0.7;
+}
+.container_Birth{
+    box-sizing: border-box;
+    font-size: 18px;
+    padding-left: 35%;
+}
+.container_Birth span{
+    display: inline-block;
+    width: 85px;
+}
+.container_Birth div{
+    margin-bottom: 5px;
+}
+.container_Birth select{
+    font-size: 17px;
+}
+.constellationIcon{
+    font-size: 40px;
+    cursor: pointer;
+}
+.animalIcon{
+    font-size: 40px;
+    cursor: pointer;
+}
+#constellation, #animal{
+    box-sizing: border-box;
+    width: 550px;
+    height: 110px;
+    margin: 0 auto;
+}
+.container_Constellation{
+    margin-bottom: 30px;
+}
+#constellation div, #animal div{
+    float: left;
+    width: 90px;
+}
+.clearFloat{
+    clear: both;
+}
+.container_Birth, .container_Constellation, .container_Animal, .container_submit{
+    display: none;
+}
+.container_submit{
+    text-align: center;
+}
+#submitBtn, #resetBtn{
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 5px 30px 5px 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#submitBtn{
+    background-color: #58CD80;
+    color: white;
+}
+#resetBtn{
+    background-color: #FEEE7D;
+    color: #F15D5C;
+    margin-right: 50px;
+}
+#submitBtn:hover{
+    opacity: 0.7;
+}
+#resetBtn:hover{
+    opacity: 0.7;
+}
+.showSomething{
+    line-height: 1.5;
+    /*user-select: auto !important;*/
+}
+.title{
+    font-size: 20px;
+    font-weight: bold;
+}
+.green{
+    font-size: 18px;
+    color: #69B015;
+}
+.red{
+    font-size: 18px;
+    color: #D82F5A;
+}
+.blue{
+    font-size: 18px;
+    color: #027BAD;
+}
+.orange{
+    font-size: 18px;
+    color: #D95C00;
+}
+.home{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    cursor: pointer;
+    border: 1px solid grey;
+    padding: 2px;
+    line-height: 1;
+    background-color: #F8F8F8;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#homeText{
+    display: none;
+    font-size: 20px;
+    color: green;
+}
+.home:hover{
+    background-color: #FF9900;
+}
+.home:hover #homeIcon{
+    display: none;
+}
+.home:hover #homeText{
+    display: block;
+}
+.phone_home{
+    display: none;
+}

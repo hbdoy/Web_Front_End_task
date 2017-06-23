@@ -1,0 +1,30 @@
+.header, .container, .footer{
+    width: 100%;
+}
+.header{
+    padding: 0;
+}
+.landingPage{
+    margin-top: 35px;
+}
+.container_Birth{
+    padding-left: 15%;
+}
+#constellation, #animal{
+    width: 275px;
+    height: 220px;
+}
+.home{
+    display: none;
+}
+.phone_home{
+    display: block;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border: 1px solid grey;
+    line-height: 1;
+    background-color: #F8F8F8;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

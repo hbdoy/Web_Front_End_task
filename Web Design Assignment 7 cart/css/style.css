@@ -1,0 +1,60 @@
+html{
+    font-family: '微軟正黑體';
+    background: linear-gradient(#F1E6EE, #B4DFF8) fixed;
+}
+table{
+    width: 500px;
+    margin: 30px auto;
+    border: 0.5px solid grey;
+    font-size: 20px;
+    border-collapse: collapse;
+    text-align: center;
+}
+th,td{
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding: 10px 0;
+}
+td:hover{
+    background: ivory;
+    font-size: 21px;
+}
+#submit{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100px;
+    text-decoration: none;
+    color: white;
+    background: #FF4F94;
+    font-size: 18px;
+    padding: 5px;
+    border: 0;
+    cursor: pointer;
+}
+.member{
+    display: block;
+    cursor: pointer;
+}
+
+.showResult{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+.showResult hr{
+    margin-top: 20px;
+}
+a{
+    display: block;
+    box-sizing: border-box;
+    width: 100px;
+    text-decoration: none;
+    color: white;
+    background: #0097A7;
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+}

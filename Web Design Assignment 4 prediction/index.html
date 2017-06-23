@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>全台首家不專業預測_上線啦</title>
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 750px)" href="css/small.css">
+</head>
+<body>
+    <div class="header">
+        <h1>歡迎來到每月運勢預測</h1>
+    </div>
+    <div class="container">
+        <div class="home">
+            <div id="homeIcon"><img src="img/home.png" alt="死圖啦" width="40px" height="40px"></div>
+            <div id="homeText">返回選單</div>
+        </div>
+        <div class="phone_home"><img src="img/home.png" alt="死圖啦" width="40px" height="40px"></div>
+        <div class="landingPage">
+            <button id="birthBtn">輸入出生年月日</button>
+            <button id="iconBtn">快速選圖</button>
+        </div>
+        <form id="userForm" method="post">
+            <div class="container_Birth">
+                <div>
+                    <label>
+                        <span>出生年份:</span>
+                        <select name="birthYear" id="birthYear"></select>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span>出生月份:</span>
+                        <select name="birthMonth" id="birthMonth"></select>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span>出生日期:</span>
+                        <select name="birthDay" id="birthDay"></select>
+                    </label>
+                </div>
+            </div>
+            <div class="container_Constellation">
+                <div id="constellation"></div>
+            </div>
+            <div class="clearFloat"></div>
+            <div class="container_Animal">
+                <div id="animal"></div>
+            </div>
+            <div class="clearFloat"></div>
+            <div class="container_submit">
+                <input type="reset" value="重設" id="resetBtn">
+                <input type="submit" value="送出" id="submitBtn">
+            </div>
+        </form>
+        <div class="showSomething"></div>
+        <div class="footer">
+            <span>內文取自網路，僅用於學術交流，如有侵權請立即告知</span>
+            <br>
+            <spna style="margin-right: 5px;">Copyright © LeeRay</spna>
+            <span><a href="mailto:s104213046@mail1.ncnu.edu.tw">E-mail</a></span>
+        </div>
+    </div>
+
+    <script src="js/prediction.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

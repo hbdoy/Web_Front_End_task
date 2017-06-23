@@ -1,0 +1,156 @@
+<!--
+  ID: 104213046
+  Author: 李禹叡
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="Web Design Assignment 1">
+  <meta charset="utf-8">
+  <title>Web Design Assignment 2 Form</title>
+<style>
+body{
+  font-family: Verdana,"微軟正黑體";
+  /*background-color: #f5f8fa;*/
+  background: linear-gradient(to left bottom,#A2C7E5,#49D49D);
+  user-select: none;
+}
+table{
+  width: 600px;
+  margin: 0 auto;
+  background-color: #FDEAD5;
+  border-radius: 10px;
+  border-collapse: collapse;
+}
+th,td{
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  text-align: left;
+}
+th{
+  text-align: center;
+  color: #0033B0;
+  font-weight: bold;
+  font-size: 20px;
+}
+.items{
+  text-align: right;
+  font-weight: bold;
+}
+.bottom_td{
+  text-align: center;
+  border-style: none;
+}
+.focus{
+  padding: 2px 0 2px 5px;
+  font-size: 16px;
+  border-radius: 3px;
+}
+.focus_other{
+  width: 100px;
+}
+.focus:focus{
+  box-shadow: 5px 5px 15px pink;
+}
+.point:hover{
+  cursor: pointer;
+}
+#submit,#reset{
+  width: 100px;
+  margin-right: 20px;
+  background: #FF4F94;
+  color: white;
+  font-size: 18px;
+  border: 1px solid #FFDF3C;
+  border-radius: 2em;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px;
+  letter-spacing: 1px;
+}
+#submit:hover,#reset:hover{
+  /*background: yellow;*/
+  /*color: #FF4F94;*/
+  font-size: 20px;
+}
+.require:before{
+  content: "*";
+  color: red;
+}
+</style>
+</head>
+<body>
+  <table>
+    <form action="http://ycchen.im.ncnu.edu.tw/join.php" method="post">
+      <tr><th colspan="2">超級購物網 會員註冊</th></tr>
+      <tr>
+        <td class="items require">姓名:</td>
+        <td><input type="text" name="name" required class="focus"></td>
+      </tr>
+      <tr>
+        <td class="items require">Email:</td>
+        <td><input type="text" name="email" class="focus" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required></td>
+      </tr>
+      <tr>
+        <td class="items require">密碼:</td>
+        <td><input type="password" class="focus" name="password" minlength="10" required></td>
+      </tr>
+      <tr>
+        <td class="items require">連絡電話:</td>
+        <td><input type="number" class="focus" name="phone" required></td>
+      </tr>
+      <tr>
+        <td class="items">月收入:</td>
+        <td>
+          <select name="income">
+          <option selected>請選擇</option>
+          <option>0k~10k</option>
+          <option>10k~22k</option>
+          <option>22k~50k</option>
+          <option>50k~80k</option>
+          <option>80k~100k</option>
+          <option>100k up</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="items">通訊地址:</td>
+        <td><input type="text" class="focus" name="address"></td>
+      </tr>
+      <tr>
+        <td class="items">性別:</td>
+        <td>
+          <label class="point"><input type="radio" name="sex" value="male">男性</label>
+          <label class="point"><input type="radio" name="sex" value="female">女性</label>
+        </td>
+      </tr>
+      <tr>
+        <td class="items">大頭貼:</td>
+        <td><input type="file" name="photo"></td>
+      </tr>
+      <tr>
+        <td class="items">喜愛顏色:</td>
+        <td><input class="point" type="color" name="favcolor"></td>
+      </tr>
+      <tr>
+        <td class="items">曾使用的購物網站:</td>
+        <td>
+          <label class="point"><input type="checkbox" name="used[]" value="ruten">露天</label>
+          <label class="point"><input type="checkbox" name="used[]" value="yahoo">Y拍</label>
+          <label class="point"><input type="checkbox" name="used[]" value="pchome">PChome</label>
+          <label>其他:<input type="text" class="focus focus_other" name="other_used" maxlength="10"></label>
+        </td>
+      </tr>
+      <tr>
+        <td class="items">給我們的建議:</td>
+        <td>
+          <textarea name="suggest" cols="30" rows="10" placeholder="Write Something here..."></textarea>
+        </td>
+      </tr>
+      <tr><td colspan="2" class="bottom_td"><input type="submit" id="submit" value="提交"><input type="reset" id="reset" value="重置"></td></tr>
+    </form>
+  </table>
+  <script>
+  </script>
+</body>
+</html>

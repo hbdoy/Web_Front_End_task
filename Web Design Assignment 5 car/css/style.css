@@ -1,0 +1,30 @@
+.car {
+    display: none;
+    position: absolute;
+}
+header{
+    width: 300px;
+    margin: 0 auto;
+}
+header form{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+header form select{
+    font-size: 16px;
+}
+header button{
+    background-color: green;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+}
+header button:hover{
+    opacity: 0.5;
+}
+#msg{
+    display: none;
+}

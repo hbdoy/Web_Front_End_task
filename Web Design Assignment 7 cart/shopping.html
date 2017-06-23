@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>購物車</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form action="php/purchase.php" method="post">
+        <table>
+            <tr>
+                <th><label for="name">訂購者姓名:</label></th>
+                <td><input type="text" id="name" name="name"></td>
+            </tr>
+            <tr>
+                <th><label for="book1">珍珠奶茶:</label></th>
+                <td><input type="number" id="book1" name="choose[]" placeholder="訂購數量" value="0">*$80</td>
+            </tr>
+            <tr>
+                <th><label for="book2">冰淇淋紅茶:</label></th>
+                <td><input type="number" id="book2" name="choose[]" placeholder="訂購數量" value="0">*$60</td>
+            </tr>
+            <tr>
+                <th><label for="book3">多多綠:</label></th>
+                <td><input type="number" id="book3" name="choose[]" placeholder="訂購數量" value="0">*$50</td>
+            </tr>
+            <tr>
+                <th rowspan="3">會員身分:</th>
+                <td><label class="member"><input type="radio" name="member" value="0" checked>一般會員</label></td>
+            </tr>
+            <tr>
+                <td><label class="member"><input type="radio" name="member" value="1">銀卡會員</label></td>
+            </tr>
+            <tr>
+                <td><label class="member"><input type="radio" name="member" value="2">金卡會員</label></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="送出訂單" id="submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

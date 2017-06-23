@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="Web Design Assignment 3">
+  <meta charset="utf-8">
+  <title>Web Design Assignment 3 CV</title>
+<style>
+body{
+  font-family: Verdana,"微軟正黑體";
+  background-color: #E3EDCD;
+}
+.box{
+  margin: 0 auto;
+  width: 1100px;
+}
+h1{
+  color: #011041;
+}
+#information{
+  line-height: 2;
+}
+#information a{
+  text-decoration: none;
+}
+#information a:visited{
+  color: blue;
+}
+#information a img{
+  vertical-align: sub;
+  margin-right: 3px;
+}
+hr{
+  border: none;
+  border-top: 3px solid grey;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+table{
+  border-spacing: 25px;
+}
+td{
+  border-top: 5px solid grey;
+  width: 300px;
+}
+#inSchool_content{
+  border-left: 1px solid grey;
+  padding-left: 50px;
+  margin-left: 35px;
+  position: relative;
+}
+#inSchool_content h3:before{
+  content: " ";
+  width: 9px;
+  height: 9px;
+  background-color: grey;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: -4.5px;
+}
+#autobiography p{
+  line-height: 2;
+  white-space: pre-wrap;
+}
+#information{
+  margin-left: 30px;
+}
+#inSchool{
+  margin-left: 30px;
+}
+#skill{
+  margin-left: 30px;
+}
+#autobiography{
+  margin-left: 30px;
+  padding-right: 40px;
+}
+#toTop{
+  position: fixed;
+  right: 8px;
+  bottom: 5px;
+}
+</style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="box">
+    <div id="information">
+      <h1>李禹叡</h1>
+      <p>
+        <b>學歷 : 國立暨南國際大學 資訊管理學系 (2015.9~2019.9)</b>
+        <br>
+      </p>
+      <p>
+        通訊地址 : 南投縣埔里鎮大城里大城路11號
+        <br>
+      </p>
+      <p>
+        電子郵件 : <a href="mailto:s104213046@mail1.ncnu.edu.tw"><img src="img/email.png">s104213046@mail1.ncnu.edu.tw</a>
+      </p>
+      <p>
+        連絡電話 : 0970761675
+      </p>
+      <p>
+        FaceBook : <a href="https://www.facebook.com/profile.php?id=100003315001440" target="_blank"><img src="img/facebook.png" width="16px">李禹叡</a>
+      </p>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <div id="inSchool">
+      <h1>在校經歷</h1>
+      <div id="inSchool_content">
+        <h3>
+          修習資料結構與演算法 <b style="font-size: 18px;">游子宜</b>, Sep 2016 - Jan 2017
+        </h3>
+        <p>
+          課程中學習基本資料結構與常見演算法，努力學習，虛心請教老師，搞懂模糊概念，取得學期成績97分。
+        </p>
+        <br>
+        <h3>
+          擔任桌球系隊副隊長, Sep 2016 - now
+        </h3>
+        <ul>
+          <li>課外之餘不忘舒展筋骨，打球放鬆。</li>
+          <li>規劃大小比賽，增進隊伍向心力，並培養自身統籌規劃與負責任的態度。</li>
+        </ul>
+        <br>
+        <h3>
+          參加課外Linux讀書會, Mar 2016 - May 2016
+        </h3>
+        <p>
+          參與暨大MOLi創新實驗室舉辦的Linux讀書會，成員間互相學習與分享基本Linux系統使用操作。
+        </p>
+        <br>
+        <h3>
+          修習網路安全概論 <b style="font-size: 18px;">葉羅堯</b>, Sep 2015 - Jan 2016
+        </h3>
+        <ul>
+          <li>課程中學習使用者權限概念、對稱與非對稱密碼系統、金鑰管理、雜湊函式、網路安全與常見攻擊手法。
+          </li>
+          <li>
+            課堂期末報告表現優異，取得學期成績94分。
+          </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <div id="skill">
+      <h1>技能</h1>
+      <table>
+        <tr>
+          <td><h1>Java</h1>實作常用資料結構與演算法</td>
+          <td><h1>HTML/CSS</h1>刻出網頁頁面與切版、了解常用CSS屬性</td>
+          <td><h1>JavaScript/JQuery</h1>使用者互動、Ajax與後端串接資料、JQuery頁面動畫效果</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td><h1>PHP/MySQL</h1>配合前端開設API、資料庫常見操作</td>
+          <td><h1>Git</h1>進行版本控管、Github團隊協作</td>
+          <td><h1>Python</h1>利用Python實作爬蟲，除了一般頁面外，能夠處理表單、登入頁，及動態網頁</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="autobiography">
+      <h1>自傳</h1>
+      <p>   「勇於嘗試，積極學習」，一直是我面對新事物與新挑戰所採取的態度。
+       你好!我是李禹叡，我是一個樂觀開朗、喜歡思考的大學生，目前就讀於國立暨南國際大學資訊管理學系。我成長於三代同堂和樂的大家庭，父母親經營美髮設計的工作，生意興隆，看著父母對工作的熱情及服務至上的態度，使我學習不論任何的專業與領域，一定要傾注所有的熱情與不放棄的勇氣。
+       在課業上，我願意以積極的態度去面對一切事物，只要是我所缺乏的或是我應該要學會的能力，我都會努力去學習，不論是請教他人或是自學。像是在團體之中，擁有不同才能的夥伴間能夠互相學習，共同解決問題與困難，往往在過程中能夠看見自己的不足，進而去補足，對於他人請求幫忙的需求，我也很樂意提供協助，這是一種成長與學習的機會。
+       大學期間，學校安排了札實的學習路線，讓我對資訊技術領域的多元和學識的淵博感到十分讚嘆。在這個資訊爆炸的時代，不論是新技術的誕生或是舊有技術的成熟，像是近期虛擬實境的成熟號稱VR元年，或是人工智慧領域AlphaGo在圍棋上的表現，以及物聯網不斷地發展，還有層出不窮的資訊安全議題...等等，使我深刻體認到不被大量資訊淹沒的唯一辦法就是不斷學習。
+       我把自己的大學四年劃分為兩個階段，前兩年除了打好基礎之外，還可以嘗試了解不同議題的領域，讓自己在和不同領域的人溝通時，能夠把概念具體一點來討論，不至於過於想像與空洞，更重要的是找到自己適合的方向。而後兩年除了學校課程的學習外，會朝著自己選擇的方向深耕，未來不論是考取研究所或是尋找企業工作，我都會持續學習。
+     </p>
+   </div>
+  </div>
+  <a href="#top" id="toTop"><img src="img/arrow.png" width="50px"></a>
+</body>
+</html>
