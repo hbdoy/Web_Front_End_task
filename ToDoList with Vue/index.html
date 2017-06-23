@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <style>
+        .container{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root" class="container">
+        <div class="row">
+            <div class="col">
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control" v-model="newToDo" v-on:keyup.enter="addToDo()">
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary" v-on:click="addToDo()">add</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" :class="{active: visibility == 'all'}" href="#all">All</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" :class="{active: visibility == 'active'}" href="#active">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" :class="{active: visibility == 'complete'}" href="#complete">Complete</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Done</th>
+                            <th>Content</th>
+                            <th>X</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="todo in filterToDo">
+                            <td><input type="checkbox" v-model="todo.done"></td>
+                            <td>{{ todo.content }}</td>
+                            <td><button class="btn btn-danger" @click="removeToDo(todo)">X</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <h1>Total: {{ fatherCounter }}</h1>
+        <todo @childplus="fatherPlus"></todo>
+        <todo></todo>
+
+        <!--<h1>All</h1>
+        <ul>
+            <li v-for="todo in all">
+                <input type="checkbox" v-model="todo.done">
+                {{ todo.content }}
+                <button @click="removeToDo(todo)">X</button>
+            </li>
+        </ul>
+
+        <h1>Avtive</h1>
+        <ul>
+            <li v-for="todo in active">
+                <input type="checkbox" v-model="todo.done">
+                {{ todo.content }}
+                <button @click="removeToDo(todo)">X</button>
+            </li>
+        </ul>
+
+        <h1>Complete</h1>
+        <ul>
+            <li v-for="todo in complete">
+                <input type="checkbox" v-model="todo.done">
+                {{ todo.content }}
+                <button @click="removeToDo(todo)">X</button>
+            </li>
+        </ul>-->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        var filterMethods = {
+            all: function (list) {
+                return list;
+            },
+            active: function (list) {
+                return list.filter(function (val) {
+                    return val.done == false;
+                });
+            },
+            complete: function (list) {
+                return list.filter(function (val) {
+                    return val.done == true;
+                });
+            }
+        };
+
+        Vue.component('todo', {
+            props: ['father'],
+            data: function(){
+                return{
+                    counter: 0
+                };
+            },
+            template: `
+            <div>
+                <button v-on:click="plus()">{{ counter }}</button>
+            </div>`,
+            methods: {
+                plus: function(){
+                    this.counter += 2;
+                    this.$emit('childplus', 2);
+                }
+            }
+        })
+
+        var app = new Vue({
+            el: '#root',
+            data: {
+                newToDo: "",
+                list: [],
+                // list: [
+                //     {content: '洗衣服', done: false},
+                //     {content: '買菜', done: false},
+                //     {content: '煮飯', done: false}
+                // ],
+                visibility: "all",
+                fatherCounter: 0
+            },
+            methods: {
+                fatherPlus: function(val){
+                    this.fatherCounter += val;
+                },
+                addToDo: function(){
+                    let add = {content: this.newToDo, done: false}
+                    this.list.push(add);
+                    this.newToDo = "";
+                },
+                removeToDo: function(remove){
+                    let index = this.list.indexOf(remove);
+                    this.list.splice(index, 1);
+                }
+            },
+            computed: {
+                filterToDo: function(){
+                    return filterMethods[this.visibility](this.list);
+                }
+            },
+            created: function(){
+                // var here = this;
+                fetch('http://10.105.27.97:3000/todos')
+                .then((res) => {
+                    if(res.ok){
+                        return res.json();
+                    }
+                })
+                .then((json) => {
+                    // console.log(json);
+                    this.list = json;
+                    // here.list = json;
+                })
+            }
+        })
+
+        function onHashChange(){
+            // console.log(window.location.hash);
+            let hash = window.location.hash.replace(/#/, '');
+            // console.log(hash);
+            if(filterMethods[hash]){
+                app.visibility = hash;
+            }else{
+                app.visibility = "all";
+                window.location.hash = "";
+            }
+        }
+        window.addEventListener('hashchange', onHashChange);
+    </script>
+</body>
+
+</html>
