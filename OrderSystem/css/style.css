@@ -1,0 +1,36 @@
+body{
+    /*background: linear-gradient(#F1E6EE, #B4DFF8) fixed;*/
+    min-height: 100vh;
+    background: #D7CABA;
+}
+#kind .btn{
+    margin-bottom: 10px;
+}
+#kind h1{
+    user-select: none;
+    font-weight: bold;
+}
+#page .btn{
+    margin-bottom: 10px;
+}
+#title{
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#titleText{
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#page p{
+    font-size: 16px;
+}
+#media div{
+    display: inline-block;
+    margin-left: 8px;
+}
+#tmpVoiceImg{
+    display: none;
+    margin-left: 8px;
+}
